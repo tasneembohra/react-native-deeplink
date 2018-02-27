@@ -19,9 +19,9 @@ handleOpenURL(event) {
 ```
 When a user in an external app or website clicks on one of our links, we will open in our new app and navigate to the intended url:
 ```
-peopleapp://people/0
-peopleapp://people/1
-peopleapp://people/2
+https://www.myntra.com/people/0
+https://www.myntra.com/people/1
+https://www.myntra.com/people/2
 ..etc
 ```
 That will navigate to the people route, and then show a person based on the id.
@@ -47,6 +47,7 @@ Below last existing import add this import:
   <action android:name="android.intent.action.VIEW" />
   <category android:name="android.intent.category.DEFAULT" />
   <category android:name="android.intent.category.BROWSABLE" />
-  <data android:scheme="peopleapp" android:host="people" /> // A
+  <data android:scheme="http" android:host="www.myntra.com" />
+  <data android:scheme="https" android:host="www.myntra.com" />
 </intent-filter>
 ```
