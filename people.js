@@ -2,8 +2,8 @@ import React from 'react';
 import { Text, Image, View, StyleSheet } from 'react-native';
 const people = { // We create a hardcoded object with some information about a few people, including only their name and image with a corresponding id key.
   0: {
-    name: 'Leela',
-    image: 'http://vignette1.wikia.nocookie.net/en.futurama/images/d/d4/Turanga_Leela.png/revision/latest?cb=20150218013044',
+    name: 'Tasneem',
+    image: 'https://i.stack.imgur.com/sMiSv.jpg?s=48&g=1',
   },
   1: {
     name: 'Bender',
@@ -29,7 +29,6 @@ return ( // We use the id to reference the correct person, displaying their imag
       <View>
         <Text style={styles.text}>{people[id].name}</Text>
         <Image
-          resizeMode="contain"
           style={styles.image}
           source={{ uri: people[id].image }}
         />
@@ -44,7 +43,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 400,
-    height: 400,
+	height: 400,
   },
 });
 export default People;
